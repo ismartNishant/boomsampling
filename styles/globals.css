@@ -6,8 +6,8 @@
 html {
     scroll-behavior: smooth;
   }
-/* #ff102e  #ff0076 */
-
+/* #ff102e   */
+#ff0076
 body{
     font-family: "Inter", serif;
 }
@@ -21,14 +21,5 @@ body{
      .font-nunito{
         font-family: "Nunito", serif;
      }
-
-    /* Responsive styles */
-    @media screen and (max-width: 768px) {
-   
-    }
-  
-    @media screen and (max-width: 480px) {
-    
-    }
   }
   

@@ -9,15 +9,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      listStyleType: {
-        none: 'none',
-        disc: 'disc',
-        decimal: 'decimal',
-        square: 'square',
-        roman: 'upper-roman',
-        'upper-alpha': 'upper-alpha', // Uppercase letters (A, B, C)
-        'lower-alpha': 'lower-alpha', // Lowercase letters (a, b, c)
-      },
       colors: {
         primary: {
           DEFAULT: '#ff102e',
