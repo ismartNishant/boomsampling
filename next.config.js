@@ -2,4 +2,3 @@
 const nextConfig = {z};
 
 module.exports = nextConfig;
-z
