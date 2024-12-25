@@ -6,7 +6,7 @@ const Footer = () => {
     const companyLinks = [
         { label: "About Us", link: "#about-us" },
         { label: "How it Works", link: "#how-it-works" },
-        { label: "FAQs", link: "#faqs" },
+        { label: "FAQs", link: "#FAQS" },
         { label: "Enquire Now", link: "#enquire-now" },
     ];
 
@@ -16,8 +16,8 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="w-full bg-white shadow-md">
-            <div className="p-5 lg:px-20 py-5 lg:py-10 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-4 lg:gap-8">
+        <footer className="w-full bg-white shadow-md pt-16 ">
+            <div className="p-5 lg:px-20 py-5 lg:py-10 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-4 lg:gap-8 border-t-2">
                 <div className="w-full max-w-sm space-y-4">
                     <Zoom>
                         <div className="flex items-center justify-start space-x-1">

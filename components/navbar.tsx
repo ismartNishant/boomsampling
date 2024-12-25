@@ -31,14 +31,14 @@ const Header = () => {
   const links = [
     { label: "About Us", link: "#about-us" },
     { label: "How it Works", link: "#how-it-works" },
-    { label: "FAQs", link: "#faqs" },
+    { label: "FAQs", link: "#FAQS" },
     { label: "Enquire Now", link: "#enquire-now" },
   ];
 
   return (
-    <header className={`w-full fixed top-0 z-50 overflow-hidden border-none`}>
+    <header className={`w-full fixed top-0 z-50 overflow-hidden ${animateHeader ? "shadow-md" : ""} border-none `}>
       <div
-        className={`w-full mx-auto relative flex items-center justify-between  duration-500 xl:px-16 ease-in ${animateHeader ? "p-3 lg:p-5  bg-pink-50" : "p-3 lg:p-8 "
+        className={`w-full mx-auto relative flex items-center justify-between  duration-500 xl:px-16 ease-in ${animateHeader ? "p-3 lg:p-5  bg-white" : "p-3 lg:p-8 "
           }`}
       >
         <Zoom>
@@ -60,7 +60,7 @@ const Header = () => {
           {links.map((link, index) => (
             <Slide key={link.label} delay={index * 100} direction="down">
               <Link
-                className={`hover:text-primary p-2 px-4 rounded-full hover:bg-primary-50/50 relative tracking-wide no-underline after:rounded-md after:absolute after:h-0.5 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}
+                className={`hover:text-primary p-2 px-4 rounded-full bg-primary-50/50 relative tracking-wide no-underline after:rounded-md after:absolute after:h-0.5 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}
                 href={link.link}
               >
                 {link.label}

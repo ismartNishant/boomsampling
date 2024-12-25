@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
             <Header />
-            <main className="container mx-auto  pt-20 pb-16  flex-grow">
+            <main className="container mx-auto  pt-20">
               {children}
             </main>
             <Footer />

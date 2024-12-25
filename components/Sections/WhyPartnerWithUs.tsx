@@ -42,7 +42,7 @@ const WhyPartnerWithUs = () => {
     ];
 
     return (
-        <section className='px-4 py-10 lg:p-20 space-y-10 '>
+        <section className='px-4  pt-14 lg:py-14 lg:px-20 space-y-5 lg:space-y-10 '>
             <HeadingOne>Why partner with us</HeadingOne>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-stretch">
                 {data.map((item) => (

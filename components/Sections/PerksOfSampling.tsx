@@ -36,7 +36,7 @@ const perksData = [
 
 const PerksOfSampling = () => {
     return (
-        <section className="px-4 lg:px-20 space-y-5">
+        <section className="px-4 pt-14 lg:px-20 lg:space-y-5">
             <HeadingOne>Perks of Sampling</HeadingOne>
             <div className="space-y-4">
                 <p className="text-gray-600">
