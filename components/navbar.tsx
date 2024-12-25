@@ -6,7 +6,8 @@ import { CgMenuRight } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import { Slide, Zoom } from "react-awesome-reveal";
-import { Button } from "@nextui-org/button";
+import { Button } from "@/components/ui/button"
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +38,7 @@ const Header = () => {
 
   return (
     <header className={`w-full fixed top-0 z-50 overflow-hidden ${animateHeader ? "shadow-md" : ""} border-none `}>
-      <div
-        className={`w-full mx-auto relative flex items-center justify-between  duration-500 xl:px-16 ease-in ${animateHeader ? "p-3 lg:p-5  bg-white" : "p-3 lg:p-8 "
-          }`}
+      <div className={`w-full mx-auto relative flex items-center justify-between  duration-500 xl:px-16 ease-in ${animateHeader ? "p-3 lg:p-5  bg-white" : "p-3 lg:p-8 "}`}
       >
         <Zoom>
           <div className="flex items-center justify-center sm:justify-start space-x-1">
@@ -69,16 +68,13 @@ const Header = () => {
           ))}
         </nav>
 
-        <Button
-          isIconOnly
-          className="text-xl xl:hidden items-center"
-          color="primary"
-          size="sm"
-          variant="ghost"
+        <button
+          className=" xl:hidden items-center rounded-md text-primary  border-2 border-primary p-1"
+        
           onClick={() => setIsOpen(true)}
         >
-          <CgMenuRight />
-        </Button>
+          <CgMenuRight  className="text-2xl"/>
+        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -90,16 +86,12 @@ const Header = () => {
             initial={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
           >
-            <Button
-              isIconOnly
-              className="absolute top-3 right-3 text-3xl "
-              color="primary"
-              size="sm"
-              variant="ghost"
+            <button
+              className="absolute top-3 right-3 rounded-md text-primary  border-2 border-primary p-1 "
               onClick={() => setIsOpen(false)}
             >
-              <IoClose />
-            </Button>
+              <IoClose  className="text-2xl"/>
+            </button>
 
             <nav className="flex flex-col  space-y-10  text-xl font-medium pt-20">
               {links.map((link) => (

@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
                             India’s first
                         </p>
                         <h1 className=" text-5xl font-bold text-black tracking-wider sm:text-7xl leading-tight lg:leading-[80px]">
-                            Phygital Sampling Platform that is
+                            physical Sampling Platform that is
                         </h1>
                         <div>
                             <div className="relative inline-flex sm:inline ">
