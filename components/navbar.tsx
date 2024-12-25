@@ -47,7 +47,7 @@ const Header = () => {
               alt="logo"
               className="object-contain w-32 sm:w-32 md:w-40 "
               height={40}
-              src="/images/logo.png"
+              src="/Images/logo.png"
               width={180}
             />
             <h1 className="text-2xl sm:text-[32px]  font-nunito tracking-normal font-medium">

@@ -25,7 +25,7 @@ const Footer = () => {
                                 alt="logo"
                                 className="object-contain w-36 h-8 md:h-10 md:w-44"
                                 height={40}
-                                src="/images/logo.png"
+                                src="/Images/logo.png"
                                 width={180}
                             />
                             <h1 className="text-[28px] sm:text-[34px] font-nunito tracking-normal font-medium leading-none">

@@ -75,7 +75,7 @@ const EnquireNow = () => {
               fill
               alt="demoimg"
               className="w-full h-full object-cover"
-              src="/images/contactus.jpg"
+              src="/Images/contactus.jpg"
             />
           </div>
         </div>
