@@ -34,7 +34,7 @@ const Footer = () => {
                         </div>
                     </Zoom>
                     <Slide direction="up">
-                        <p className=" text-gray-600 text-base">
+                        <p className=" text-gray-600 text-base font-semibold">
                             Genjee Technologies Private Limited is committed to providing innovative and sustainable
                             solutions to empower businesses worldwide.
                         </p>
@@ -43,14 +43,14 @@ const Footer = () => {
 
 
                 <div className="space-y-2 lg:space-y-4">
-                    <h4 className="text-lg font-semibold text-gray-800">Company</h4>
+                    <h4 className="text-3xl uppercase font-semobold tracking-wide text-gray-800 bebas-neue-regular">Company</h4>
                     <ul className="space-y-2">
                         {companyLinks.map((link, index) => (
                             <Slide key={index} delay={index * 100} direction="down">
                                 <li>
                                     <Link
                                         href={link.link}
-                                        className="text-gray-600 hover:text-primary transition-colors"
+                                        className="text-gray-600 hover:text-primary transition-colors font-semibold"
                                     >
                                         {link.label}
                                     </Link>
@@ -62,14 +62,14 @@ const Footer = () => {
 
                 {/* Third Column */}
                 <div className="space-y-2 lg:space-y-4">
-                    <h4 className="text-lg font-semibold text-gray-800">Legal</h4>
+                    <h4 className="text-3xl uppercase font-semobold tracking-wide text-gray-800 bebas-neue-regular">Legal</h4>
                     <ul className=" space-y-2">
                         {legalLinks.map((link, index) => (
                             <Slide key={index} delay={index * 100} direction="down">
                                 <li>
                                     <Link
                                         href={link.link}
-                                        className="text-gray-600 hover:text-primary transition-colors"
+                                        className="text-gray-600 hover:text-primary transition-colors font-semibold"
                                     >
                                         {link.label}
                                     </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
             {/* Footer Bottom */}
             <div className="border-t border-gray-200 p-4">
                 <Slide className="" direction="up">
-                    <p className="text-center text-sm text-gray-600 uppercase">
+                    <p className="text-center text-sm text-gray-600 uppercase font-semibold">
                         © 2024 | All rights reserved | Genjee Technologies Private Limited
                     </p>
                 </Slide>

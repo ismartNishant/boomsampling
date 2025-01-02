@@ -55,11 +55,11 @@ const Header = () => {
           </div>
         </Zoom>
 
-        <nav className="hidden xl:flex justify-center space-x-4 text-sm uppercase font-normal">
+        <nav className="hidden xl:flex justify-center space-x-4 text-xs uppercase tracking-wider font-black">
           {links.map((link, index) => (
             <Slide key={link.label} delay={index * 100} direction="down">
               <Link
-                className={`hover:text-primary p-2 px-4 rounded-full bg-primary-50/50 relative tracking-wide no-underline after:rounded-md after:absolute after:h-0.5 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}
+                className={`hover:text-primary shadow p-2 px-4 rounded-full bg-primary-50/50 relative  no-underline after:rounded-md after:absolute after:h-0.5 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}
                 href={link.link}
               >
                 {link.label}

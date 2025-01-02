@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Form } from "@nextui-org/form";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-
+import { Player } from '@lottiefiles/react-lottie-player';
 import HeadingOne from "../Headings/HeadingOne";
 
 const EnquireNow = () => {
@@ -21,7 +21,7 @@ const EnquireNow = () => {
 
   const validatePhoneNumber = (value: string) => /^\d{10}$/.test(value);
 
-  
+
   const handleInputChange = (inputValue: string, fieldName: string) => {
     switch (fieldName) {
       case "name":
@@ -66,22 +66,21 @@ const EnquireNow = () => {
 
 
   return (
-    <section className="px-4 pt-16 lg:pt-20 lg:px-20 space-y-5 lg:space-y-10 text-center" id="enquire-now">
+    <section className="px-4 pt-16 lg:pt-20 lg:px-20 space-y-5 lg:space-y-16 text-center" id="enquire-now">
       <HeadingOne>Enquire with our experts for product sampling</HeadingOne>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 w-full">
-        <div className=" max-w-screen-lg lg:max-w-lg flex justify-center items-center w-full mx-auto ">
-          <div className="w-full  h-64 lg:h-96 rounded-lg overflow-hidden relative">
-            <Image
-              fill
-              alt="demoimg"
-              className="w-full h-full object-cover"
-              src="/Images/contactus.jpg"
-            />
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2  xl:gap-20 w-full">
+        <div className="relative max-w-screen-lg lg:max-w-lg flex justify-center items-center w-full mx-auto ">
+          <Player
+            className=" relative xl:-top-10 w-full xl:h-[550px]"
+            autoplay
+            loop
+            src="/Images/contact.json"
+          >
+          </Player>
         </div>
         <div className="w-full mx-auto ">
-          <Form className="w-full" onSubmit={handleFormSubmit}>
-            <div className="space-y-5 w-full">
+          <Form className="w-full" onSubmit={handleFormSubmit} >
+            <div className="space-y-5 w-full bg-primary-50/30 shadow  p-4 rounded-xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
                 <Input
                   isClearable
@@ -163,7 +162,7 @@ const EnquireNow = () => {
                 label="Message"
                 variant="bordered"
               />
-              <Button className="uppercase text-lg h-12 rounded-full w-52" color="primary">
+              <Button className="uppercase text-lg font-extrabold h-12 rounded-full w-52 hover:scale-95 duration-300 ease-in-out" color="primary" >
                 Submit
               </Button>
             </div>
