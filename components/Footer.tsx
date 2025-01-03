@@ -11,8 +11,8 @@ const Footer = () => {
     ];
 
     const legalLinks = [
-        { label: "Privacy Policy", link: "#privacy-policy" },
-        { label: "Terms and Conditions", link: "#terms-conditions" },
+        { label: "Privacy Policy", link: "/privacy-policy" },
+        { label: "Terms and Conditions", link: "/terms-and-conditions" },
     ];
 
     return (
@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="p-5 lg:px-20 py-5 lg:py-10 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-4 lg:gap-8 border-t-2">
                 <div className="w-full max-w-sm space-y-4">
                     <Zoom>
-                        <div className="flex items-center justify-start space-x-1">
+                        <Link href="/" className="flex items-center justify-start space-x-1">
                             <Image
                                 alt="logo"
                                 className="object-contain w-36 h-8 md:h-10 md:w-44"
@@ -31,7 +31,7 @@ const Footer = () => {
                             <h1 className="text-[28px] sm:text-[34px] font-nunito tracking-normal font-medium leading-none">
                                 Sampling
                             </h1>
-                        </div>
+                        </Link>
                     </Zoom>
                     <Slide direction="up">
                         <p className=" text-gray-600 text-base font-semibold">

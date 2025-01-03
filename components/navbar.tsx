@@ -41,7 +41,7 @@ const Header = () => {
       <div className={`w-full mx-auto relative flex items-center justify-between  duration-500 xl:px-16 ease-in ${animateHeader ? "p-3 lg:p-5  bg-white" : "p-3 lg:p-8 "}`}
       >
         <Zoom>
-          <div className="flex items-center justify-center sm:justify-start space-x-1">
+          <Link href="/" className="flex items-center justify-center sm:justify-start space-x-1">
             <Image
               alt="logo"
               className="object-contain w-32 sm:w-32 md:w-40 "
@@ -52,7 +52,7 @@ const Header = () => {
             <h1 className="text-2xl sm:text-[32px]  font-nunito tracking-normal font-medium">
               Sampling
             </h1>
-          </div>
+          </Link>
         </Zoom>
 
         <nav className="hidden xl:flex justify-center space-x-4 text-xs uppercase tracking-wider font-black">
@@ -93,7 +93,7 @@ const Header = () => {
               <IoClose  className="text-2xl"/>
             </button>
 
-            <nav className="flex flex-col  space-y-10  text-xl font-medium pt-20">
+            <nav className="flex flex-col  space-y-10  text-xl font-extrabold pt-20">
               {links.map((link) => (
                 <Link
                   key={link.label}

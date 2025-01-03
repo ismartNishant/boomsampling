@@ -1,8 +1,8 @@
 'use client'
 import React from 'react';
 import HeadingOne from '../Headings/HeadingOne';
-import Image from 'next/image';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { Fade, Slide, Zoom } from 'react-awesome-reveal';
 
 const perksData = [
     {
@@ -39,27 +39,33 @@ const PerksOfSampling = () => {
     return (
         <section className="px-4 pt-14 lg:px-20 lg:space-y-5">
             <HeadingOne>Perks of Sampling</HeadingOne>
-            <div className="space-y-6">
-                <p className="text-gray-600 font-extrabold w-1/2 text-lg">
-                    Strategised campaigns to target the right audience, understand sentiments, and use those findings for a cost-effective launch.
-                </p>
-                <div className="grid  mx-auto justify-center">
+            <div className="space-y-10">
+                <Fade>
+                    <p className="text-gray-600 font-extrabold  w-full lg:w-1/2  test-base lg:text-lg">
+                        Strategised campaigns to target the right audience, understand sentiments, and use those findings for a cost-effective launch.
+                    </p>
+                </Fade>
+                <div className="grid  mx-auto justify-center gap-5 lg:gap-0">
                     {perksData.map((perk, index) => (
                         <div key={perk.id}
-                            className={`p-5 max-w-screen-xl gap-10  flex flex-col lg:flex-row ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'} items-center space-y-4 lg:space-y-0 justify-between`} >
-                            <Player
-                                className="w-full max-w-lg "
+                            className={`max-w-screen-xl gap-5 border-2 lg:border-none p-2 lg:p-0 rounded-2xl lg:gap-10  flex flex-col lg:flex-row ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'} items-center space-y-4 lg:space-y-0 justify-between`} >
+
+                            <Zoom> <Player
+                                className="w-full max-w-lg  "
                                 autoplay
                                 loop
                                 src={perk.image}
-            >
+                            >
                             </Player>
+                            </Zoom>
 
                             {/* Content Section */}
-                            <div className="flex flex-col gap-5 justify-center w-full lg:w-1/2 bg-gradient-to-br from-primary-300 px-5 py-16 to-primary text-white rounded-xl">
-                                <h2 className="text-5xl font-semibold font-bubblegum">{perk.title}</h2>
-                                <p className="text-lg">{perk.description}</p>
-                            </div>
+                            <Fade  className='w-full lg:w-1/2'>
+                                <div className="flex flex-col gap-3 lg:gap-5 justify-center  bg-gradient-to-br from-primary-300  px-2 lg:px-5 py-5 lg:py-16 to-primary text-white rounded-xl">
+                                    <Slide direction='down'> <h2 className="text-4xl lg:text-5xl font-semibold font-bubblegum">{perk.title}</h2></Slide>
+                                    <Slide direction='down'><p className="text-lg">{perk.description}</p></Slide>
+                                </div>
+                            </Fade>
                         </div>
                     ))}
                 </div>

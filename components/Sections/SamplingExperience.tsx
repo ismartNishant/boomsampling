@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import HeadingOne from "../Headings/HeadingOne";
 import { FaRegPlayCircle } from "react-icons/fa";
 import { Button } from "@nextui-org/button";
+import { Zoom } from "react-awesome-reveal";
 
 const SamplingExperience = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -41,8 +42,10 @@ const SamplingExperience = () => {
 
         {/* Custom Play Button Overlay */}
         {!isControlsVisible && (
+
           <div className="absolute inset-0 flex items-center justify-center z-20 cursor-pointer">
-            <Button
+            <Zoom> 
+              <Button
               isIconOnly
               variant="ghost"
               color="primary"
@@ -52,6 +55,7 @@ const SamplingExperience = () => {
             >
               <FaRegPlayCircle />
             </Button>
+            </Zoom>
           </div>
         )}
       </div>

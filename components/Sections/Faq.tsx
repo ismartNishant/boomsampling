@@ -3,6 +3,7 @@ import React from 'react'
 import HeadingOne from '../Headings/HeadingOne';
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { HiChevronDoubleDown } from "react-icons/hi";
+import { Fade, Slide } from 'react-awesome-reveal';
 
 
 const Faq = () => {
@@ -41,8 +42,8 @@ const Faq = () => {
             answer: "There’s no fixed duration for product sampling with Boom Sampling—you can run a campaign for as little as one day or as long as needed. You can also expand your reach across multiple locations or run multiple campaigns simultaneously. "
         },
         {
-            question:"How will I receive the feedback from my users ?",
-            answer:"After your product sampling campaign ends, users will be asked to share their feedback via an SMS link. You can view real-time feedback and detailed reports directly through your dashboard."
+            question: "How will I receive the feedback from my users ?",
+            answer: "After your product sampling campaign ends, users will be asked to share their feedback via an SMS link. You can view real-time feedback and detailed reports directly through your dashboard."
         }
     ];
 
@@ -53,23 +54,26 @@ const Faq = () => {
                 Frequently asked questions
             </HeadingOne>
             <div className='w-full mx-auto max-w-screen-lg '>
-                <Accordion variant="splitted" selectionMode="multiple"
             
-                    className="gap-4 lg:gap-5  flex flex-col px-0"
-                    defaultExpandedKeys={["0"]}
-                    itemClasses={{
-                        base: " text-start lg:p-4",
-                        title: `text-base lg:text-3xl  uppercase font-medium bebas-neue-regular `,
-                        indicator: "text-primary text-3xl  data-[open=true]:-rotate-90 ",
-                        trigger: " flex items-start  ",
-                        content: 'pt-1 text-gray-500 text-sm lg:text-base font-semibold'
-                    }}>
-                    {faqs.map((faq, index) => (
-                        <AccordionItem key={index} aria-label={`Accordion ${index + 1}`} title={faq.question} indicator={<HiChevronDoubleDown />}>
-                            <p>{faq.answer}</p>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
+                    <Accordion variant="splitted" selectionMode="multiple"
+                        className="gap-4 lg:gap-5  flex flex-col px-0"
+                        defaultExpandedKeys={["0"]}
+                        itemClasses={{
+                            base: " text-start lg:p-4",
+                            title: `text-xl lg:text-3xl  uppercase font-medium bebas-neue-regular `,
+                            indicator: "text-primary text-3xl  data-[open=true]:-rotate-90 ",
+                            trigger: " flex items-start  ",
+                            content: 'pt-0 text-gray-500 text-sm lg:text-base font-semibold'
+                        }}>
+                        {faqs.map((faq, index) => (
+
+                            <AccordionItem key={index} aria-label={`Accordion ${index + 1}`} title={faq.question} indicator={<HiChevronDoubleDown />}>
+                                <Fade direction='down'><p>{faq.answer}</p></Fade>
+                            </AccordionItem>
+
+                        ))}
+                    </Accordion>
+            
             </div>
         </section>
     )

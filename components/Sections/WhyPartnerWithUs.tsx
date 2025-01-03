@@ -1,8 +1,10 @@
+'use client'
 import React from "react";
 import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 
 import HeadingOne from "../Headings/HeadingOne";
+import { Zoom } from "react-awesome-reveal";
 const WhyPartnerWithUs = () => {
   const data = [
     {
@@ -51,27 +53,24 @@ const WhyPartnerWithUs = () => {
       <HeadingOne>Why partner with us</HeadingOne>
 
       <div className="flex flex-wrap items-stretch justify-center gap-8">
-        {data.map((item) => (
-          <Card
-            key={item.id}
-            className=" flex flex-col p-2 hover:scale-105 duration-300 ease-in-out w-full max-w-[430px] bg-gradient-to-br from-primary-400/5 to-secondary-400/10"
-          >
-            <CardBody className="flex flex-col items-center gap-10 justify-center h-full ">
+        {data.map((item,index) => (
+          <Zoom key={item.id} delay={index * 100} className="flex flex-col p-4  group  rounded-xl w-full max-w-[430px] hover:bg-gradient-to-bl bg-gradient-to-br from-primary-400/5 to-secondary-400/10">
+            <div className="flex flex-col items-center gap-10 justify-center h-full ">
               <div className="relative w-40 h-40 ">
                 <Image
                   fill
                   alt={item.description}
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 duration-300 ease-in-out"
                   priority={true} // Optional: Ensures the image loads quickly
                   src={item.imgSrc}
                 />
               </div>
               <div className="space-y-2 ">
-              <h1 className="text-3xl leading-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bubblegum">  {item.title} </h1>
+                <h1 className="text-3xl leading-8 bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent font-bubblegum">  {item.title} </h1>
                 <p className=" font-extrabold text-gray-700">{item.description}</p>
               </div>
-            </CardBody>
-          </Card>
+            </div>
+          </Zoom>
         ))}
       </div>
       {/* <div className="flex flex-wrap items-stretch justify-center gap-5">

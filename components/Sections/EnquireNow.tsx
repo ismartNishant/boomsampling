@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Form } from "@nextui-org/form";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { Player } from '@lottiefiles/react-lottie-player';
 import HeadingOne from "../Headings/HeadingOne";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const EnquireNow = () => {
   const [phoneno, setPhoneNo] = React.useState("");
@@ -70,103 +70,121 @@ const EnquireNow = () => {
       <HeadingOne>Enquire with our experts for product sampling</HeadingOne>
       <div className="grid grid-cols-1 lg:grid-cols-2  xl:gap-20 w-full">
         <div className="relative max-w-screen-lg lg:max-w-lg flex justify-center items-center w-full mx-auto ">
-          <Player
-            className=" relative xl:-top-10 w-full xl:h-[550px]"
-            autoplay
-            loop
-            src="/Images/contact.json"
-          >
-          </Player>
+          <Zoom className="relative xl:-top-10 ">
+            <Player
+              className=" w-full xl:h-[550px]"
+              autoplay
+              loop
+              src="/Images/contact.json"
+            >
+            </Player>
+          </Zoom>
         </div>
         <div className="w-full mx-auto ">
-          <Form className="w-full" onSubmit={handleFormSubmit} >
-            <div className="space-y-5 w-full bg-primary-50/30 shadow  p-4 rounded-xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
-                <Input
-                  isClearable
-                  isRequired
-                  required
-                  className=""
-                  id="FullName"
-                  label="Name"
-                  name="fullname"
-                  type="text"
-                  value={name}
-                  variant="bordered"
-                  onValueChange={(inputValue) =>
-                    handleInputChange(inputValue, "name")
-                  }
-                />
-                <Input
-                  isClearable
-                  isRequired
-                  required
-                  className=""
-                  color={emailError ? "danger" : email ? "success" : "default"}
-                  errorMessage={emailError || "Please enter a valid email"}
-                  id="UserEmail"
-                  isInvalid={!!emailError}
-                  label="Email"
-                  name="useremail"
-                  type="email"
-                  value={email}
-                  variant="bordered"
-                  onValueChange={(inputValue) =>
-                    handleInputChange(inputValue, "email")
-                  }
-                />
-                <Input
-                  isClearable
-                  isRequired
-                  required
-                  color={
-                    isPhoneInvalid ? "danger" : phoneno ? "success" : "default"
-                  }
-                  errorMessage="Please enter a valid 10-digit phone number"
-                  id="phoneNumber"
-                  inputMode="numeric" // Hint for mobile numeric keypad
-                  isInvalid={isPhoneInvalid}
-                  label="Phone No"
-                  maxLength={10}
-                  name="mobilenumber"
-                  pattern="[0-9]*"
-                  type="tel"
-                  value={phoneno}
-                  variant="bordered"
-                  onValueChange={(inputValue) =>
-                    handleInputChange(inputValue, "phone")
-                  }
-                />
-                <Input
-                  isClearable
-                  isRequired
-                  required
-                  className=""
-                  label="City"
-                  type="text"
-                  variant="bordered"
-                />
+          <Fade>
+            <Form className="w-full" onSubmit={handleFormSubmit} >
+              <div className="space-y-5 w-full bg-primary-50/30 shadow  p-4 rounded-xl">
+                <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
+                  <Fade>
+                    <Input
+                      isClearable
+                      isRequired
+                      required
+                      className=""
+                      id="FullName"
+                      label="Name"
+                      name="fullname"
+                      type="text"
+                      value={name}
+                      variant="bordered"
+                      onValueChange={(inputValue) =>
+                        handleInputChange(inputValue, "name")
+                      }
+                    />
+                  </Fade>
+                  <Fade>
+                    <Input
+                      isClearable
+                      isRequired
+                      required
+                      className=""
+                      color={emailError ? "danger" : email ? "success" : "default"}
+                      errorMessage={emailError || "Please enter a valid email"}
+                      id="UserEmail"
+                      isInvalid={!!emailError}
+                      label="Email"
+                      name="useremail"
+                      type="email"
+                      value={email}
+                      variant="bordered"
+                      onValueChange={(inputValue) =>
+                        handleInputChange(inputValue, "email")
+                      }
+                    />
+                  </Fade>
+                  <Fade>
+                    <Input
+                      isClearable
+                      isRequired
+                      required
+                      color={
+                        isPhoneInvalid ? "danger" : phoneno ? "success" : "default"
+                      }
+                      errorMessage="Please enter a valid 10-digit phone number"
+                      id="phoneNumber"
+                      inputMode="numeric" // Hint for mobile numeric keypad
+                      isInvalid={isPhoneInvalid}
+                      label="Phone No"
+                      maxLength={10}
+                      name="mobilenumber"
+                      pattern="[0-9]*"
+                      type="tel"
+                      value={phoneno}
+                      variant="bordered"
+                      onValueChange={(inputValue) =>
+                        handleInputChange(inputValue, "phone")
+                      }
+                    />
+                  </Fade>
+                  <Fade>
+                    <Input
+                      isClearable
+                      isRequired
+                      required
+                      className=""
+                      label="City"
+                      type="text"
+                      variant="bordered"
+                    />
+                  </Fade>
+                </div>
+                <Fade>
+                  <Input
+                    isClearable
+                    isRequired
+                    required
+                    className=""
+                    label="Business Name"
+                    type="text"
+                    variant="bordered"
+                  />
+                </Fade>
+                <Fade>
+                  <Textarea
+                    isRequired
+                    required
+                    label="Message"
+                    variant="bordered"
+                  />
+                </Fade>
+                <Zoom>
+                  <Button className="uppercase text-lg font-extrabold h-12 rounded-full w-52 hover:scale-95 duration-300 ease-in-out" color="primary" >
+                    Submit
+                  </Button>
+                </Zoom>
               </div>
-              <Input
-                isClearable
-                isRequired
-                required
-                className=""
-                label="Business Name"
-                type="text"
-                variant="bordered"
-              />
-              <Textarea
-                isRequired
-                required
-                label="Message"
-                variant="bordered"
-              />
-              <Button className="uppercase text-lg font-extrabold h-12 rounded-full w-52 hover:scale-95 duration-300 ease-in-out" color="primary" >
-                Submit
-              </Button>
-            </div>
-          </Form>
+            </Form>
+          </Fade>
         </div>
       </div>
     </section>
